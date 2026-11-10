@@ -1,0 +1,81 @@
+/* Palette taken from the survey figures (Figure 1 and the overview panels). */
+:root {
+  --paper: #fff;
+  --ink: #23222e;
+  --navy: #1d1b5e;
+  --muted: #626074;
+  --line: #e4e3ef;
+  --rule: #c4c1f3;
+  --surface: #f6f5fe;
+  --accent: #4f4bd6;
+  --accent-strong: #24208f;
+  --accent-soft: #c9c6fb;
+  --indigo: #6b67ee;
+  --lavender: #9793f8;
+  --sky: #50b2d7;
+  --mint: #60c7ab;
+  --lilac: #d6a0ed;
+  --blue: #2c84ff;
+  --card: #fff;
+  --tint: #f3f2ff;
+  --select: #e4defd;
+  --on-navy: #fff;
+  --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --display: 'Newsreader', var(--serif);
+  --mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+}
+/* dark theme, matching continuous-lm. theme.js sets data-theme from the saved choice or the system setting. */
+:root[data-theme="dark"] {
+  --paper: #0f0e22;
+  --card: #1a1938;
+  --surface: #171633;
+  --ink: #d6d5ee;
+  --navy: #c8c6ff;
+  --muted: #9a98c4;
+  --line: #2a2950;
+  --rule: #3c3a6e;
+  --accent: #aeacff;
+  --accent-strong: #dcdaff;
+  --accent-soft: #4a4790;
+  --tint: #24224d;
+  --select: #3c3a6e;
+  --on-navy: #0f0e22;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 18px/1.65 var(--serif); -webkit-font-smoothing: antialiased; transition: background .25s, color .25s; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+button, summary { cursor: pointer; }
+button { color: inherit; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+svg { display: block; }
+::selection { background: var(--select); }
+h1, h2, h3, p { margin-top: 0; }
+p { margin-bottom: 18px; }
+sup { margin-left: 2px; font-size: .65em; line-height: 0; }
+code { font: .88em var(--mono); }
+.wrap { width: min(980px, calc(100% - 64px)); margin-inline: auto; }
+.skip-link { position: fixed; z-index: 100; top: -80px; left: 20px; background: var(--navy); color: var(--on-navy); padding: 12px 20px; }
+.skip-link:focus { top: 10px; }
+.prose-link, .abstract-copy a, .news-list a, .section-note a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-soft); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.abstract-copy a:hover, .news-list a:hover, .section-note a:hover { color: var(--accent-strong); text-decoration-color: currentColor; }
+
+
+.paper-title { margin: 0 0 22px; font-family: var(--display); font-size: 46px; font-weight: 500; letter-spacing: -.9px; line-height: 1.15; color: var(--navy); }
+.paper-title > span { display: block; }
+.paper-title .title-sub { margin-top: 5px; font-weight: 400; }
+.paper-title em { color: var(--accent); font-weight: 500; }
+.section-heading { margin: 0 0 18px; font-size: 32px; font-weight: 600; line-height: 1.25; letter-spacing: -.55px; color: var(--navy); }
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 20px; padding-block: 26px; border-top: 1px solid var(--rule); color: var(--muted); font: 12px/1.6 var(--sans); }
+footer a:hover { color: var(--accent); }
+@media(max-width:760px) { .paper-title {font-size:32px} }
+.theme-toggle { position: absolute; z-index: 40; top: 14px; right: 14px; display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1.5px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--accent); transition: background .15s; }
+.theme-toggle:hover { background: var(--tint); }
+.theme-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .icon-sun, :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+@media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto} *,*::before,*::after {transition:none!important} }

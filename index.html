@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="An algorithmic review of generative biomolecular design, with an interactive map of continuous, discrete and multimodal methods.">
+  <meta property="og:title" content="Probing the Biomolecular Design Space with Generative Modeling">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Probing the Biomolecular Design Space with Generative Modeling</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@400..700&display=swap">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script src="theme.js"></script>
+  <script src="site.js" defer></script>
+  <script src="hero.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+  <nav id="contents" class="contents-nav" aria-label="Page contents" inert>
+    <button class="contents-toggle" aria-expanded="false" aria-controls="contents-list"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h12"/></svg><span>Contents</span><span class="contents-current" aria-hidden="true">Overview</span></button>
+    <p class="contents-heading">Contents</p>
+    <ol id="contents-list" class="contents-list">
+      <li><a href="#overview" aria-current="location"><span>Overview</span></a></li>
+      <li><a href="#abstract"><span>1. Abstract</span></a></li>
+      <li><a href="#news"><span>2. News</span></a></li>
+      <li><a href="#citation"><span>3. BibTeX</span></a></li>
+    </ol>
+  </nav>
+  <main id="main">
+    <section id="overview" class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-heading">
+        <h1 id="hero-title" class="paper-title"><span>Probing the Biomolecular Design Space</span> <span class="title-sub">with <em>Generative Modeling</em></span></h1>
+        <div class="authors">
+          <p class="author-row"><span><a href="https://sophtang.github.io/" target="_blank" rel="noopener">Sophia Tang</a></span><span><a href="https://www.linkedin.com/in/yinuozhang98/" target="_blank" rel="noopener">Yinuo Zhang</a></span><span><a href="https://www.chatterjeelab.com/" target="_blank" rel="noopener">Pranam Chatterjee</a></span></p>
+          <p class="author-emails"><a href="mailto:sophtang@engineering.upenn.edu">sophtang@engineering.upenn.edu</a><a href="mailto:pranam@engineering.upenn.edu">pranam@engineering.upenn.edu</a></p>
+          <div class="affiliations"><span class="institution institution-penn"><img src="assets/logos/penn.svg" alt="University of Pennsylvania" width="273" height="88"></span></div>
+        </div>
+      </div>
+
+      <div class="project-directory">
+        <nav class="project-contents" aria-labelledby="project-contents-title">
+          <h2 id="project-contents-title">Contents</h2>
+          <ol>
+            <li><a href="#abstract">1. Abstract</a></li>
+            <li><a href="#news">2. News and updates</a></li>
+            <li><a href="#citation">3. BibTeX</a></li>
+          </ol>
+        </nav>
+        <div class="project-resources">
+          <a class="resource-button resource-preview resource-list" href="https://github.com/sophtang/Awesome-Generative-Biomolecular-Design" target="_blank" rel="noopener" aria-label="Paper list on GitHub">
+            <span class="resource-label">[Paper List]</span>
+            <span class="repository-preview" aria-hidden="true">
+              <img src="assets/icons/github.svg" alt="" width="25" height="25">
+              <span class="repository-owner">sophtang /</span>
+              <strong>Awesome-Generative-<br>Biomolecular-Design</strong>
+              <span class="repository-caption">Curated papers on biomolecular design</span>
+              <span class="repository-language"><i></i> Awesome list</span>
+            </span>
+          </a>
+          <a class="resource-button resource-preview map-button" href="map/" aria-label="Interactive map of papers">
+            <span class="resource-label">[Explore the Map]</span>
+            <span class="map-preview" aria-hidden="true"><video src="assets/previews/paper-map.mp4" poster="assets/previews/paper-map-poster.webp" width="1920" height="1200" autoplay muted loop playsinline preload="metadata"></video></span>
+          </a>
+          <a class="resource-button paper-button resource-preview" href="https://doi.org/10.1016/j.sbi.2026.103428" target="_blank" rel="noopener" aria-label="Read on Elsevier">
+            <span class="resource-label">[Read on Elsevier]</span>
+            <span class="paper-preview" aria-hidden="true"><img src="assets/previews/paper-cover.jpg" alt="" width="447" height="580"></span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <div class="sampler" id="sampler">
+          <div class="sm-tabs" role="group" aria-label="Mechanism">
+            <button class="chip" type="button" data-mode="flow" aria-pressed="true">Flow matching</button>
+            <button class="chip" type="button" data-mode="diffusion" aria-pressed="false">Denoising diffusion</button>
+            <button class="chip" type="button" data-mode="discrete" aria-pressed="false">Discrete flows</button>
+            <span class="sep" aria-hidden="true"></span>
+            <button class="chip" type="button" data-mode="steer" aria-pressed="false">Trajectory steering</button>
+            <button class="chip" type="button" data-mode="shape" aria-pressed="false">Distribution shaping</button>
+          </div>
+          <div class="sm-stage"><canvas role="img" aria-label="Animated samples moving from noise to data under the selected mechanism"></canvas></div>
+          <div class="sm-foot">
+            <p class="sm-caption" aria-live="polite"></p>
+            <div class="sm-extra"></div>
+          </div>
+        </div>
+        <figcaption><strong>Algorithmic foundations of generative biomolecular design.</strong> Continuous transport, stochastic sampling and discrete jumps provide base generators. Trajectory steering controls sampling with fixed parameters; distribution shaping updates the generator. These methods support design across small molecules, mRNA, peptides and proteins.</figcaption></figure>
+    </section>
+
+    <section id="abstract" class="text-section wrap" aria-labelledby="abstract-title">
+      <h2 id="abstract-title" class="section-heading">Abstract</h2>
+      <div class="abstract-box ds" id="ds">
+        <div class="abstract-copy"><p>Discovering new-to-nature biomolecules requires navigating <span class="ds-phrase" role="button" tabindex="0" data-step="0">a design space that has only been sparsely explored</span>. Traditional paradigms such as <span class="ds-phrase" role="button" tabindex="0" data-step="1">rational design, directed evolution, and high-throughput screening</span> have driven many successful functional biomolecules, but are significantly limited when given <span class="ds-phrase" role="button" tabindex="0" data-step="2">an unseen target or novel function</span>, where there is no starting point for design. Generative modeling offers a way to <span class="ds-phrase" role="button" tabindex="0" data-step="3">approximate the continuous manifold underlying observed biological data</span>, enabling <span class="ds-phrase" role="button" tabindex="0" data-step="4">the sampling of new candidates beyond any finite dataset</span> while remaining within the support of viable, functional biomolecules. Here, we outline recent progress in generative biomolecular design through an algorithmic lens, bridging theoretical foundations to its extensions and applications in truly <span class="ds-phrase" role="button" tabindex="0" data-step="5"><em>de novo</em> and <em>controllable</em> biomolecular design</span>.</p></div>
+        <div class="ds-side">
+          <canvas aria-hidden="true"></canvas>
+          <p class="ds-cap" aria-live="polite"></p>
+          <div class="ds-ctl"><button class="chip" type="button" id="ds-play">▶ Play</button><div class="step-dots" id="ds-dots"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="text-section wrap" aria-labelledby="news-title">
+      <h2 id="news-title" class="section-heading">News and Updates</h2>
+      <!-- Newest first. Copy an <li> to add an update. -->
+      <ol class="news-list"><li><time datetime="2026-11-10">Nov 10, 2026</time><p>Our review paper &ldquo;<a href="https://doi.org/10.1016/j.sbi.2026.103428" target="_blank" rel="noopener">Probing the Biomolecular Design Space with Generative Modeling</a>&rdquo; is published in <em>Current Opinion in Structural Biology</em>.</p></li><li><time datetime="2026-11-10">Nov 10, 2026</time><p><a href="map/">A Map of Generative Modeling for Biomolecular Design</a> and the <a href="https://github.com/sophtang/Awesome-Generative-Biomolecular-Design" target="_blank" rel="noopener">paper list</a> are live.</p></li></ol>
+    </section>
+
+    <section id="citation" class="bibtex-section wrap" aria-labelledby="citation-title">
+      <h2 id="citation-title" class="section-heading">BibTeX</h2>
+      <p class="section-note">If you find this review or the paper map useful, please cite the review: <a href="https://doi.org/10.1016/j.sbi.2026.103428" target="_blank" rel="noopener">doi.org/10.1016/j.sbi.2026.103428</a>.</p>
+      <div class="citation-box">
+        <button id="copy-bibtex" type="button" aria-label="Copy BibTeX citation" title="Copy BibTeX"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h12v12H8zM16 4H4v12"/></svg></button>
+        <pre><code id="bibtex-code">@article{tang2026probing,
+  title   = {Probing the Biomolecular Design Space with Generative Modeling},
+  author  = {Tang, Sophia and Zhang, Yinuo and Chatterjee, Pranam},
+  journal = {Current Opinion in Structural Biology},
+  volume  = {102},
+  pages   = {103428},
+  year    = {2027},
+  doi     = {10.1016/j.sbi.2026.103428}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>Probing the Biomolecular Design Space with Generative Modeling</span><a href="map/">Explore the paper map</a></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

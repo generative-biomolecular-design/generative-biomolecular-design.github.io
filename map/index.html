@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generative Modeling for Biomolecular Design — Paper Map</title>
+<meta name="description" content="Explore source-linked papers on generative modeling for biomolecular design, with abstract summaries and filters for application, model type, publication year, and wet-lab evidence.">
+<meta name="author" content="Sophia Tang">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="map.css">
+<script src="../theme.js"></script>
+<script defer src="data.js"></script>
+<script defer src="map.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#map">Skip to map</a>
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+<header class="map-hero wrap" id="top">
+  <nav class="map-crumbs" aria-label="Related pages">
+    <a href="../">&larr; Review project page</a>
+    <a href="#indexTitle">Paper index</a>
+    <a href="#citation">BibTeX</a>
+    <a href="https://doi.org/10.1016/j.sbi.2026.103428" target="_blank" rel="noopener">Read review ↗</a>
+    <a href="https://github.com/sophtang/Awesome-Generative-Biomolecular-Design" target="_blank" rel="noopener">GitHub paper list ↗</a>
+  </nav>
+  <h1 class="paper-title"><span>A Map of Generative Modeling</span><span class="title-sub"><em>for Biomolecular Design</em></span></h1>
+  <p class="map-deck">Explore the space of <mark class="hl-lavender">generative modeling papers for biomolecular design</mark>, from <mark class="hl-mint">different architectures and parameterizations to novel design tasks</mark>. <mark class="hl-sky">Colors and shapes mark model families.</mark> Select a paper for a condensed abstract, experimental evidence, and links to the publication and available code.</p>
+  <p class="map-updated">Last updated <time datetime="2026-11-10">Nov 10, 2026</time></p>
+</header>
+
+<main class="map-page wrap" id="map">
+  <div class="widget map-widget">
+    <div class="widget-frame">
+      <div class="widget-head">
+        <span class="w-title">Generative modeling for biomolecular design</span>
+        <span class="w-kind" id="mapCount"></span>
+      </div>
+
+      <div class="map-toolbar">
+        <label class="map-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Search models, titles, authors" autocomplete="off" aria-label="Search papers">
+        </label>
+        <div class="map-years"><span class="tb-label">Through</span><div class="seg" id="years" role="group" aria-label="Show papers through year"></div></div>
+        <div class="seg map-zoom" aria-label="Zoom">
+          <button class="btn icon-btn" type="button" id="zoomIn" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          <button class="btn icon-btn" type="button" id="zoomOut" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+          <button class="btn icon-btn" type="button" id="zoomReset" aria-label="Reset view" title="Reset view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        </div>
+      </div>
+
+      <div class="map-legend" id="legend" role="group" aria-label="Filter by family"></div>
+      <div class="map-filters" id="filters" aria-label="Paper filters"></div>
+      <div class="filter-status"><span id="filterStatus" role="status"></span><button class="btn" id="clearFilters" type="button">Reset filters</button><button class="btn" id="downloadData" type="button">Download collection ↓</button></div>
+
+      <div class="map-stage" id="stage">
+        <svg id="mapSvg" role="group" aria-labelledby="mapSvgTitle">
+          <title id="mapSvgTitle">Map of biomolecular design papers grouped by model family</title>
+          <g id="layerHalos"></g>
+          <g id="layerEdges"></g>
+          <g id="layerNodes"></g>
+          <g id="layerLabels"></g>
+          <g id="layerClusters"></g>
+        </svg>
+        <div class="map-tip" id="tip" role="tooltip" hidden></div>
+        <aside class="map-panel" id="panel" aria-live="polite" hidden></aside>
+        <p class="map-empty" id="empty" hidden>No papers match. Reset the filters to explore the full collection.</p>
+      </div>
+      <p class="hint map-hint">Drag to pan, scroll or pinch to zoom, and select a paper for details.</p>
+    </div>
+  </div>
+
+  <section class="paper-index" aria-labelledby="indexTitle">
+    <h2 id="indexTitle" class="section-heading">Paper index</h2>
+    <p class="index-sub" id="indexSub">Every paper on the map, grouped by family. The search and filters above apply here too.</p>
+    <div id="index"></div>
+  </section>
+  <section class="curation" id="curation" aria-labelledby="curationTitle">
+    <h2 class="section-heading" id="curationTitle">About the collection</h2>
+    <p>The space of viable, functional biomolecules is vast and only sparsely explored. Rational design, directed evolution, and high-throughput screening have delivered many successful molecules, yet a new target or function may offer no obvious starting point. Generative models learn from observed biological data to propose candidates beyond a finite dataset.</p>
+    <p>This map accompanies <a href="https://doi.org/10.1016/j.sbi.2026.103428" target="_blank" rel="noopener">Probing the Biomolecular Design Space with Generative Modeling</a>. Following the review’s algorithmic perspective, it connects the foundations of generative modeling to <em>de novo</em> and <em>controllable</em> biomolecular design. Explore how different generators and control strategies navigate the design space across proteins, peptides, nucleic acids, small molecules, and cell states.</p>
+    <p id="collectionMeta"></p>
+  </section>
+  <section class="map-citation" id="citation" aria-labelledby="citationTitle">
+    <h2 class="section-heading" id="citationTitle">BibTeX</h2>
+    <p>If you find this review or the paper map useful, please cite the review: <a href="https://doi.org/10.1016/j.sbi.2026.103428" target="_blank" rel="noopener">doi.org/10.1016/j.sbi.2026.103428</a>.</p>
+    <pre class="map-bibtex"><code>@article{tang2026probing,
+  title   = {Probing the Biomolecular Design Space with Generative Modeling},
+  author  = {Tang, Sophia and Zhang, Yinuo and Chatterjee, Pranam},
+  journal = {Current Opinion in Structural Biology},
+  volume  = {102},
+  pages   = {103428},
+  year    = {2027},
+  doi     = {10.1016/j.sbi.2026.103428}
+}</code></pre>
+  </section>
+</main>
+<footer class="wrap"><a href="../">&larr; Probing the Biomolecular Design Space with Generative Modeling</a><a href="#top">Back to map ↑</a></footer>
+</body>
+</html>
